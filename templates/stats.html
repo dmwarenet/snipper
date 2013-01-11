@@ -1,0 +1,7 @@
+$def with (count, result)
+No. of clicks : $count <br/>
+Last five visitors : <br/>
+
+$for r in result:
+    $r.ip visited at $r.created_at<br/>
+

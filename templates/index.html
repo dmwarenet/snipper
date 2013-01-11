@@ -1,0 +1,41 @@
+$def with (hello, result)
+<html>
+<head>
+<title>Snipper.in</title>
+<link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
+<!--[if IE]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+</head>
+<body>
+<div class="container">
+<div class="span-4">&nbsp;</div>
+<div class="span-16" style='text-align:center;background:#FFFFFF'>
+<div class="span-1">&nbsp;</div>
+<div class="span-14">
+<hr class="space">
+<img src="/static/images/snipper_logo.gif"/>
+<p>Snip those long,ugly urls and get a real short one. You can even get stats out of your snipped urls (how many clicks, what kind of browsers, etc.)</p>
+<p><b>We have an API as well:</b><br>
+http://snipper.in/geturl?url=[your url here]<br>
+This will return a url<br><br>
+To see the stats for a snip url, append stats (for example:)<br>
+<a href="http://snipper.in/2/stats">http://snipper.in/2/stats</a>
+</p>
+<hr class="space">
+<form id="giveurl" action="/" method=POST> 
+URL to be snipped : <input type="text" name="url" />
+<input type="submit" value="snip" /><br />
+</form>
+
+$if hello == "1":
+    <hr class="space">
+    <div class="success">Here is your shorter link : <a href="$result">$result</a></div>
+
+<hr class="space">
+(c)2008 <a href="http://dipankar.name">Dipankar Sarkar</a> - Contact at {me [at] dipankar.name}
+<hr class="space">
+</div>
+</div>
+</div>
+</body>
+</html>
